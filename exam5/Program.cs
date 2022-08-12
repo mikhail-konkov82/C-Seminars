@@ -11,8 +11,10 @@ void quatr(int x, int y)
 {
     if (x == 0 || y == 0)
         Console.WriteLine("Error!");
+
     if (x > 0 && y > 0)
         Console.WriteLine("First quatr");
+
     if (x < 0 && y > 0)
         Console.WriteLine("Second quatr");
 
@@ -29,11 +31,17 @@ int y = int.Parse(Console.ReadLine());
 
 quatr(x, y);
 
+
+
 double distance(int x_a, int y_a, int x_b, int y_b)
 {
     double d = Math.Sqrt(Math.Pow(x_b - x_a, 2) + Math.Pow(y_b - y_a, 2));
     return d;
 }
+int x1 = int.Parse(Console.ReadLine());
+int y1 = int.Parse(Console.ReadLine());
+int x2 = int.Parse(Console.ReadLine());
+int y2 = int.Parse(Console.ReadLine());
 
-double result = distance(3, 6, 2, 1);
+double result = distance(x1, y1, x2, y2);
 Console.WriteLine(result);
