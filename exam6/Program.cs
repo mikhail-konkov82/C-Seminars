@@ -32,3 +32,16 @@ int A = int.Parse(Console.ReadLine());
 Console.WriteLine("Sum to A=" + summ(A));
 Console.WriteLine("Product to A=" + multi(A));
 
+int n = 5;
+int min = 0, max = 2;
+int [] array = new int[n];
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = new Random().Next(min, max);
+}
+
+for (int i = 0; i < array.Length; i++)
+{
+    Console.Write(array[i] + " ");
+}
+
