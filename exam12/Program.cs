@@ -11,11 +11,11 @@
 
 // [1, -5, 8, 4, -9] -> 4.33
 
-int[] FillArray(int[] array, int min = -10, int max = 11)
+int[] FillArray(int[] array, int min, int max)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(min, max);
+        array[i] = new Random().Next(min, max + 1);
     }
     Console.WriteLine(string.Join(", ", array));
     return array;
@@ -38,11 +38,11 @@ double average(int[] array)
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] > 0) 
+        if (array[i] > 0)
         {
-            sum += array[i]; 
-            count += 1; 
-        }      
+            sum += array[i];
+            count += 1;
+        }
     }
     Console.WriteLine("sum: " + sum);
     Console.WriteLine("count: " + count);
@@ -51,7 +51,7 @@ double average(int[] array)
 }
 
 
-int [] array = new int[8];
-FillArray(array);
+int[] array = new int[8];
+FillArray(array, -10, 10);
 reverse(array);
 average(array);
